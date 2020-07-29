@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetera", "Cafetera\Cafetera.csproj", "{115B9395-FC0B-4D38-92D9-35F237E52706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{9D7259FE-C64F-4B06-83ED-108C065BB5F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{115B9395-FC0B-4D38-92D9-35F237E52706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115B9395-FC0B-4D38-92D9-35F237E52706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115B9395-FC0B-4D38-92D9-35F237E52706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115B9395-FC0B-4D38-92D9-35F237E52706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7259FE-C64F-4B06-83ED-108C065BB5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7259FE-C64F-4B06-83ED-108C065BB5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7259FE-C64F-4B06-83ED-108C065BB5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7259FE-C64F-4B06-83ED-108C065BB5F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD88E4E6-6C53-4012-B5F6-3F1D3C0EF50A}
+	EndGlobalSection
+EndGlobal
