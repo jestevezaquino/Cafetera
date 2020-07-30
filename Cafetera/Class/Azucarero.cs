@@ -29,7 +29,8 @@ namespace Cafetera
             if (getCantidadDeAzucar() >= cantidad)
             {
                 return true;
-            } else
+            } 
+            else
             {
                 return false;
             }
@@ -39,11 +40,10 @@ namespace Cafetera
         {
             if (hasAzucar(cantidad) == true)
             {
-
                 CantidadDeAzucar = getCantidadDeAzucar() - cantidad;
                 return CantidadDeAzucar;
-
-            } else
+            } 
+            else
             {
                 return 0;
             }   

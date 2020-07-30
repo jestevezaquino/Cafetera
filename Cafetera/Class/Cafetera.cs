@@ -6,19 +6,43 @@ namespace Cafetera.Class
 {
     public class Cafetera
     {
-        public int cantidadCafe { get; set; }
-        public Cafetera(int cantidadCafe) {
-            this.cantidadCafe=cantidadCafe;
+        int cantidadCafe { get; set; }
+
+        public Cafetera(int cantidadCafe) 
+        {
+            setCantidadCafe(cantidadCafe);
         }
-        public bool hasCafe(int cantidadCafe) {
-            if (cantidadCafe<=this.cantidadCafe)
+
+        public void setCantidadCafe(int cantidadCafe)
+        {
+            this.cantidadCafe = cantidadCafe;
+        }
+
+        public int getCantidadCafe()
+        {
+            return this.cantidadCafe;
+        }
+
+        public bool hasCafe(int cantidadCafe) 
+        {
+            if (cantidadCafe <= this.cantidadCafe)
             {
                 return true;
             }
             return false;
         }
-        public void giveCafe(int cantidadCafe) {
-            this.cantidadCafe -= cantidadCafe;
+
+        public int giveCafe(int cantidadCafe)
+        {
+            if(hasCafe(cantidadCafe) == true) 
+            {
+                setCantidadCafe(this.cantidadCafe - cantidadCafe);
+                return getCantidadCafe();
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

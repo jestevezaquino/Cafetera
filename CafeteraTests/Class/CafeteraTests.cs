@@ -10,23 +10,25 @@ namespace Cafetera.Class.Tests
     public class CafeteraTests
     {
         [TestMethod()]
-        public void deberiaDevolverVerdaderoSiExisteCafe()
-        {
+        public void hayCafeTest() {
             Cafetera cafetera = new Cafetera(10);
             bool resultado = cafetera.hasCafe(5);
             Assert.AreEqual(true, resultado);
         }
+
         [TestMethod()]
-        public void deberiaDevolverFalsoSiNoExisteCafe() {
+        public void noHayCafeTest() {
             Cafetera cafetera = new Cafetera(10);
             bool resultado = cafetera.hasCafe(11);
             Assert.AreEqual(false, resultado);
         }
+
+        /** Evalua la cantidad de cafe restante despues de servir cafe**/
         [TestMethod()]
-        public void deberiaRestarCafeAlaCafetera() {
+        public void cantidadCafeTest() {
             Cafetera cafetera = new Cafetera(10);
-             cafetera.giveCafe(7);
-            Assert.AreEqual(3, cafetera.cantidadCafe);
+            cafetera.giveCafe(7);
+            Assert.AreEqual(3, cafetera.getCantidadCafe());
         }
     }
 }
