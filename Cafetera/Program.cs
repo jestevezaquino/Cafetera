@@ -1,4 +1,5 @@
 ﻿using System;
+using Cafetera;
 
 namespace Cafetera
 {
@@ -6,7 +7,8 @@ namespace Cafetera
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Azucarero az = new Azucarero(100);
+            az.setCantidadDeAzucar(10);
         }
     }
 }
