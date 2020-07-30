@@ -12,7 +12,6 @@ namespace Cafetera
         public Azucarero(int cantidad)
         {
             setCantidadDeAzucar(cantidad);
-
         }
 
         public void setCantidadDeAzucar(int cantidad)
@@ -23,21 +22,17 @@ namespace Cafetera
         public int getCantidadDeAzucar()
         {
             return CantidadDeAzucar;
-
         }
 
         public bool hasAzucar(int cantidad)
         {
-
             if (getCantidadDeAzucar() >= cantidad)
             {
                 return true;
             } else
             {
                 return false;
-
             }
-
         }
 
         public int giveAzucar(int cantidad)
@@ -51,11 +46,7 @@ namespace Cafetera
             } else
             {
                 return 0;
-            }
-               
-            
+            }   
         }
-
- 
     }
 }

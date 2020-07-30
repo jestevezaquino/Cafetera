@@ -18,7 +18,6 @@ namespace Cafetera.Tests
             az.hasAzucar(5);
 
             Assert.IsTrue(true);
-
         }
 
 
@@ -28,7 +27,6 @@ namespace Cafetera.Tests
             bool result = az.hasAzucar(15);
 
             Assert.AreEqual(false, result);
-
         }
 
         [TestMethod()]
@@ -41,10 +39,6 @@ namespace Cafetera.Tests
             az.giveAzucar(2);
 
             Assert.AreEqual(3, az.getCantidadDeAzucar());
-
-
         }
-
-
     }
 }
