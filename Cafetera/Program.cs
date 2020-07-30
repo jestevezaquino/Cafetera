@@ -7,8 +7,7 @@ namespace Cafetera
     {
         static void Main(string[] args)
         {
-            Azucarero az = new Azucarero(100);
-            az.setCantidadDeAzucar(10);
+            Console.WriteLine("Hello World!");
         }
     }
 }
