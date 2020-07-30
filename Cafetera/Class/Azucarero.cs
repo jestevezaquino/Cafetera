@@ -42,9 +42,18 @@ namespace Cafetera
 
         public int giveAzucar(int cantidad)
         {
-            CantidadDeAzucar = getCantidadDeAzucar() - cantidad;
-            return CantidadDeAzucar;
+            if (hasAzucar(cantidad) == true)
+            {
 
+                CantidadDeAzucar = getCantidadDeAzucar() - cantidad;
+                return CantidadDeAzucar;
+
+            } else
+            {
+                return 0;
+            }
+               
+            
         }
 
  
