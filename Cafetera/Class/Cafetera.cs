@@ -39,10 +39,7 @@ namespace Cafetera.Class
                 setCantidadCafe(this.cantidadCafe - cantidadCafe);
                 return getCantidadCafe();
             }
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
     }
 }

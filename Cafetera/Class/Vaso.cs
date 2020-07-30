@@ -6,22 +6,39 @@ namespace Cafetera.Class
 {
     public class Vaso
     {
-        public int cantidadVasos { get; set; }
-        public int contenido { get; set; }
+        int cantidadVasos { get; set; }
+        int contenido { get; set; }
 
         public Vaso(int cantidadVasos, int contenido) {
             this.contenido = contenido;
+            setCantidadVasos(cantidadVasos);
+        }
+
+        public void setCantidadVasos(int cantidadVasos)
+        {
             this.cantidadVasos = cantidadVasos;
         }
+
+        public int getCantidadVasos()
+        {
+            return this.cantidadVasos;
+        }
+
         public bool hasVasos(int cantidadVasos) {
-            if (cantidadVasos<=this.cantidadVasos)
+            if (cantidadVasos <= this.cantidadVasos)
             {
                 return true;
             }
             return false;
         }
-        public void giveVasos(int  cantidadVasos) {
-            this.cantidadVasos -= cantidadVasos;
+
+        public int giveVasos(int cantidadVasos) {
+            if(hasVasos(cantidadVasos) == true)
+            {
+                setCantidadVasos(this.cantidadVasos - cantidadVasos);
+                return getCantidadVasos();
+            }
+            return 0;
         }
     }
 }
