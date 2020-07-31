@@ -13,7 +13,7 @@ namespace Cafetera.Tests
         Azucarero az = new Azucarero(10);
 
         [TestMethod()]
-        public void hayAzucarTest()
+        public void trueBcItHasSugar()
         {
             az.hasAzucar(5);
 
@@ -22,7 +22,7 @@ namespace Cafetera.Tests
 
 
         [TestMethod()]
-        public void noHayAzucarTest()
+        public void falseBcItHasNoSugar()
         {
             bool result = az.hasAzucar(15);
 
@@ -30,7 +30,7 @@ namespace Cafetera.Tests
         }
 
         [TestMethod()]
-        public void tomarAzucar()
+        public void shouldSubstractSugar()
         {
             az.giveAzucar(5);
 
