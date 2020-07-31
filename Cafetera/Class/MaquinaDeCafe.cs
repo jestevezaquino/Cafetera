@@ -16,10 +16,15 @@ namespace Cafetera.Class
         {
             if(vaso.getCantidadVasos() >= cantidadDeVasos)
             {
+
                 if(cafe.getCantidadCafe() >= vaso.getContenidoVaso())
                 {
                     if(azucar.getCantidadDeAzucar() >= cantidadDeAzucar){
-                        return null;
+                        vaso.setCantidadVasos(vaso.getCantidadVasos() - cantidadDeVasos);
+                        azucar.setCantidadDeAzucar(azucar.getCantidadDeAzucar() - cantidadDeAzucar);
+                        cafe.setCantidadCafe(cafe.getCantidadCafe() - (vaso.getContenidoVaso() * cantidadDeVasos));
+
+                        return "Felicitaciones";
                     }
                     return "No hay Azucar";
                 }
@@ -41,6 +46,13 @@ namespace Cafetera.Class
                 default:
                     return null;
             }
+        }
+
+  
+
+        public Cafetera getCafetera()
+        {
+            return this.cafe;
         }
 
         public void setCafetera(Cafetera cafetera)
@@ -81,6 +93,10 @@ namespace Cafetera.Class
         public void setAzucarero(Azucarero azucarero) 
         {
             azucar = azucarero;
+        }
+        public Azucarero getAzucarero()
+        {
+            return this.azucar;
         }
     }
 }

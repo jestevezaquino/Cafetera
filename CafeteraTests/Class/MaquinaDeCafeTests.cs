@@ -71,7 +71,7 @@ namespace CafeteraTests.Class
             Assert.AreEqual("No hay Cafe", resultado);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void deberiaDevolverNoHayAzucar()
         {
             azucarero = new Azucarero(2);
@@ -80,5 +80,44 @@ namespace CafeteraTests.Class
             string resultado = maquinaDeCafe.getVasoDeCafe(vaso, 1, 3);
             Assert.AreEqual("No hay Azucar", resultado);
         }
+
+        [TestMethod()]
+        public void deberiaRestarCafe()
+        {
+            maquinaDeCafe.setCafetera(cafetera);
+            Vaso vaso = maquinaDeCafe.getTipoVaso("pequeno");
+            maquinaDeCafe.getVasoDeCafe(vaso,1,3);
+            int resultado = maquinaDeCafe.getCafetera().getCantidadCafe();
+            Assert.AreEqual(40, resultado);
+        }
+
+        [TestMethod()]
+        public void deberiaRestarVaso()
+        {
+            
+            Vaso vaso = maquinaDeCafe.getTipoVaso("pequeno");
+            maquinaDeCafe.getVasoDeCafe(vaso, 1, 3);
+            int resultado = maquinaDeCafe.getVasosPequenos().getCantidadVasos();
+            Assert.AreEqual(4, resultado);
+        }
+
+        [TestMethod()]
+        public void deberiaRestarAzucar()
+        {
+            Vaso vaso = maquinaDeCafe.getTipoVaso("pequeno");
+            maquinaDeCafe.getVasoDeCafe(vaso, 1, 3);
+            int resultado = maquinaDeCafe.getAzucarero().getCantidadDeAzucar();
+            Assert.AreEqual(17, resultado);
+        }
+
+        [TestMethod()]
+        public void deberiaDevolverFelicitaciones()
+        {
+            Vaso vaso = maquinaDeCafe.getTipoVaso("pequeno");
+            maquinaDeCafe.getVasoDeCafe(vaso, 1, 3);
+            string resultado = maquinaDeCafe.getVasoDeCafe(vaso, 1, 3);
+            Assert.AreEqual("Felicitaciones", resultado);
+        }
     }
+
 }

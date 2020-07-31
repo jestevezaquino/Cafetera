@@ -19,6 +19,11 @@ namespace Cafetera.Class
             return contenido;
         }
 
+        public void setContenidoVaso(int contenido)
+        {
+            this.contenido=contenido;
+        }
+
         public void setCantidadVasos(int cantidadVasos)
         {
             this.cantidadVasos = cantidadVasos;

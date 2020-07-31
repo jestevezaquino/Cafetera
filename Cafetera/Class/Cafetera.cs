@@ -20,7 +20,7 @@ namespace Cafetera.Class
 
         public int getCantidadCafe()
         {
-            return this.cantidadCafe;
+            return cantidadCafe;
         }
 
         public bool hasCafe(int cantidadCafe) 
