@@ -48,8 +48,6 @@ namespace Cafetera.Class
             }
         }
 
-  
-
         public Cafetera getCafetera()
         {
             return this.cafe;
