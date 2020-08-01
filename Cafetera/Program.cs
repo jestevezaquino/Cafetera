@@ -60,6 +60,8 @@ namespace Cafetera
                 }
                 else
                 {
+                    Console.WriteLine("Debe seleccionar una de las opciones antes presentadas. Presione cualquier tecla para intentarlo de nuevo");
+                    Console.ReadKey();
                     Console.Clear();
                 }
             }
@@ -86,16 +88,13 @@ namespace Cafetera
 
             if(subject == "amount" || subject == "cup" || subject == "sugar")
             {
-                try
+                inicio:
+                if (int.TryParse(Console.ReadLine(),out int valor))
                 {
-                    return Int32.Parse(Console.ReadLine());
+                    return valor;
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    Console.ReadKey();
-                    throw new NotImplementedException();
-                }
+                Console.WriteLine("Debe introducir valores numericos, Presione cualquier tecla para intentarlo de nuevo");
+                goto inicio;
             }
             return 0;
         }

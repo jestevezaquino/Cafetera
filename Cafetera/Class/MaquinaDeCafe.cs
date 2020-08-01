@@ -16,7 +16,6 @@ namespace Cafetera.Class
         {
             if(vaso.getCantidadVasos() >= cantidadDeVasos)
             {
-
                 if(cafe.getCantidadCafe() >= vaso.getContenidoVaso())
                 {
                     if(azucar.getCantidadDeAzucar() >= cantidadDeAzucar){
