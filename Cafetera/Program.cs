@@ -104,11 +104,11 @@ namespace Cafetera
             switch (cupType)
             {
                 case 1:
-                    return maquinaDeCafe.getVasoDeCafe(vasosPequenos, amount, sugar);
+                    return maquinaDeCafe.getVasoDeCafe(vasosPequenos, amount, amount * sugar);
                 case 2:
-                    return maquinaDeCafe.getVasoDeCafe(vasosMedianos, amount, sugar);
+                    return maquinaDeCafe.getVasoDeCafe(vasosMedianos, amount, amount * sugar);
                 case 3:
-                    return maquinaDeCafe.getVasoDeCafe(vasosGrandes, amount, sugar);
+                    return maquinaDeCafe.getVasoDeCafe(vasosGrandes, amount, amount * sugar);
                 default:
                     return null;
             }
