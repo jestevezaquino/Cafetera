@@ -35,12 +35,12 @@ namespace Cafetera
 
             Ruler = true;
 
-            Console.WriteLine("Bienvenidos a la Cafetera preferida de los Domininicanos en este tiempo de cuarentena...");
+            Console.WriteLine("Bienvenido a la Cafetera preferida de los Domininicanos en este tiempo de cuarentena...");
 
             Console.WriteLine("Especifique la cantidad de Vasos que desea ordenar: ");
             Amount = InputValidation("amount");
 
-            Console.WriteLine("Por favor especifique los cubos de azucar que desea agregar a su Cafe: ");
+            Console.WriteLine("Por favor especifique los cubos de azucar que desea agregar a su café: ");
             Sugar = InputValidation("sugar");
 
             // Simula una pequeña espera
@@ -60,7 +60,7 @@ namespace Cafetera
                 }
                 else
                 {
-                    Console.WriteLine("Debe seleccionar una de las opciones antes presentadas. Presione cualquier tecla para intentarlo de nuevo");
+                    Console.WriteLine("Debe seleccionar una de las opciones antes presentadas. Inténtelo de nuevo.");
                     Console.ReadKey();
                     Console.Clear();
                 }
@@ -73,7 +73,7 @@ namespace Cafetera
             string result = PrepareCup(Cup, Amount, Sugar);
             if(result == "Felicitaciones")
             {
-                Console.WriteLine($"Aquí tiene su pedido ({Amount} vasos de cafes con {Sugar} cubos de azucar cada uno). " + "{0}", "Gracias por su compra, pase feliz resto del día! :)");
+                Console.WriteLine($"Aquí tiene su pedido: ({Amount} vasos de cafes con {Sugar} cubos de azucar). " + "{0}", "Gracias por su compra, pase feliz resto del día! :)");
                 Console.ReadKey();
             }
             else
@@ -93,7 +93,7 @@ namespace Cafetera
                 {
                     return valor;
                 }
-                Console.WriteLine("Debe introducir valores numericos, Presione cualquier tecla para intentarlo de nuevo");
+                Console.WriteLine("Debe introducir valores numericos, inténtelo de nuevo.");
                 goto inicio;
             }
             return 0;
